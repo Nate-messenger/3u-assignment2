@@ -7,4 +7,4 @@
  f) true
  g) true
 
-2/The two if else statements behave differently because the first statement checks if the bot can pick up items first the second one tests whether it can`t pick up an item first.  
+2/The two if else statements behave the same because if there is no item on both statements it will turn left and if there is it will turn right.  
