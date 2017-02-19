@@ -1,0 +1,10 @@
+
+1/a) true
+ b) true
+ c) false
+ d) false
+ e) false
+ f) true
+ g) true
+
+2/The two if else statements behave differently because the first statement checks if the bot can pick up items first the second one tests whether it can`t pick up an item first.  
