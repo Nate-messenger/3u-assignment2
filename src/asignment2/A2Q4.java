@@ -7,6 +7,7 @@ package asignment2;
 
 import becker.robots.City;
 import becker.robots.Direction;
+import static becker.robots.Direction.NORTH;
 import becker.robots.Robot;
 import becker.robots.Wall;
 
@@ -23,7 +24,7 @@ public class A2Q4 {
         //creates a city named kw
         City kw = new City();
 
-        Robot steve = new Robot(kw, 5, 1, Direction.WEST);
+        Robot steve = new Robot(kw, 3, 1, NORTH);
 
         new Wall(kw, 1, 1, Direction.NORTH);
         new Wall(kw, 1, 1, Direction.SOUTH);
@@ -53,46 +54,30 @@ public class A2Q4 {
 
         new Wall(kw, 2, 3, Direction.NORTH);
         new Wall(kw, 2, 3, Direction.EAST);
-        
+
         new Wall(kw, 3, 3, Direction.SOUTH);
         new Wall(kw, 3, 3, Direction.EAST);
-        
-        for(;;){
+
+        for (;;) {
             //moves and checks if there are walls
-            do{
+            do {
                 steve.move();
                 steve.turnLeft();
                 steve.turnLeft();
                 steve.turnLeft();
-            }
-               while(steve.frontIsClear());{
-            steve.turnLeft();
-            //if the front is still not clear turn again
-            if(!steve.frontIsClear()){
+                //turns to check the ball
+            } while (steve.frontIsClear());{
                 steve.turnLeft();
+                //if the front is still not clear turn again
+                if (!steve.frontIsClear()) {
+                    steve.turnLeft();
+                }
+
             }
-            
+
         }
-             
-                   
-            
-            
-            
-            
-            
-            
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
     }
 
 }
+

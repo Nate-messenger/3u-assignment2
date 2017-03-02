@@ -22,53 +22,54 @@ public class A2Q3 {
 //creates a city named kw
         City kw = new City();
 
-        Robot steve = new Robot(kw, 21, 16, Direction.EAST);
+        Robot steve = new Robot(kw, 9,99, Direction.EAST);
 
         for (;;) {
             //cheks if steve is at zero
             while (steve.getAvenue() > 0) {
-
+               //turns steve the correct way
                 if (steve.getDirection() == Direction.NORTH) {
                     steve.turnLeft();
                     steve.turnLeft();
                     steve.turnLeft();
                     steve.turnLeft();
                 }
+                //turns steve the correct way
                 if (steve.getDirection() == Direction.SOUTH) {
                     steve.turnLeft();
                 }
+                //turns steve the correct way
                 if (steve.getDirection() == Direction.EAST) {
                     steve.turnLeft();
                     steve.turnLeft();
                 }
+                //when steve is in the correct direction move it
                 if (steve.getDirection() == Direction.WEST) {
                     steve.move();
                 }
             }
             //cheks if steve is at street zero
-            while (steve.getStreet()> 0) {
-
+            while (steve.getStreet() > 0) {
+            //turns steve the correct way
                 if (steve.getDirection() == Direction.WEST) {
                     steve.turnLeft();
-                    
                 }
+                //turns steve the correct way
                 if (steve.getDirection() == Direction.SOUTH) {
                     steve.turnLeft();
                     steve.turnLeft();
                 }
+                //turns steve the correct way
                 if (steve.getDirection() == Direction.EAST) {
                     steve.turnLeft();
                     steve.turnLeft();
                     steve.turnLeft();
                 }
+                //when steve is the correct way move him to 1, 1 
                 if (steve.getDirection() == Direction.NORTH) {
                     steve.move();
                 }
-            
-            
-            
+            }
         }
     }
-
-}
 }

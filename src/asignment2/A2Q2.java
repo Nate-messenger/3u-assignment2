@@ -47,15 +47,14 @@ public class A2Q2 {
 
         new Thing(kw, 2, 14);
 
-        
         for (;;) {
-            //when the fronnt is clear steve moves forwards
+            //when the front is clear steve moves forwards
             if (steve.frontIsClear()) {
                 steve.move();
                 //jumps the hurdle
             } else {
                 steve.turnLeft();
-                steve.move();   
+                steve.move();
 
                 steve.turnLeft();
                 steve.turnLeft();
@@ -68,14 +67,11 @@ public class A2Q2 {
                 steve.move();
 
                 steve.turnLeft();
-
             }
-            
+            //when it finds the thing it stops
             if (steve.canPickThing()) {
                 break;
             }
-
         }
     }
-
 }
